@@ -1,0 +1,157 @@
+<div class="top">
+    <a href="#trading">下載</a>
+    <a >註冊</a>
+    <a >登入</a>
+</div>
+<div class="row1">
+    <a href="index.html"><h1>logo</h1></a>
+    <nav>
+        <span></span>
+        <span></span>
+        <span></span>
+    </nav>
+    <div class="right">
+        <a href="#about">關於我們</a>
+        <a href="#transaction">交易</a>
+        <a href="#trading">交易平台</a>
+        <a href="#service">服務簡介</a>
+        <a href="#contact">聯絡我們</a>
+    </div>
+    <div class="menu">
+        <div class="black">
+            <a >下載</a>
+            <a >註冊</a>
+            <a >登入</a>
+        </div>
+        <a href="#about">關於我們</a>
+        <a href="#transaction">交易</a>
+        <a href="#trading">交易平台</a>
+        <a href="#service">服務簡介</a>
+        <a href="#contact">聯絡我們</a>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+    let $H=$(window).height();
+    let $W=$(window).width();
+    $('header .bg').height($H+70);
+    let h=$('header .row1 .menu').height();
+    if($H-40 < h){
+       $('header .row1 .menu').css({'overflow-y':'scroll'});
+       }
+
+    //resize   
+   $(window).resize(function(){
+        let $H=$(window).height();
+        let $W=$(window).width();
+        $('header .menu').hide();
+        $('#main').removeClass('sliderDown');
+        $("body").removeClass('menuOpen');
+        let h=$('header .row1 .menu').height();
+        if($H-40 < h){
+            $('header .row1 .menu').css({'overflow-y':'scroll'});
+        }
+        if($W<750){
+        $('header .top').hide();
+    }
+   });
+
+   //header
+   $(document).scroll(function(){
+       
+      if($W<750){
+        $('header .top').hide();
+        if($(this).scrollTop() > 3400){
+            $('footer img').addClass('position');
+        }
+        if ($(this).scrollTop() > 103){ 
+            $('header').addClass('bgColor');
+            $('header .row1').addClass('margin');
+        }else{
+            $('header').removeClass('bgColor');
+            $('header .row1').removeClass('margin');
+        }
+      }else{
+        $('footer img').removeClass('position');
+        if ($(this).scrollTop() > 103){ 
+            $('header').addClass('bgColor');
+            $('header .row1').addClass('margin');
+            $('header .top').slideUp();
+        }else{
+            $('header').removeClass('bgColor');
+            $('header .row1').removeClass('margin');
+            $('header .top').slideDown();
+        }
+      }
+   });
+
+    /*menu*/
+    $('header nav').click(function(){
+        $('header .menu').slideToggle();
+        $("body").toggleClass('menuOpen');
+        $('#main').toggleClass('sliderDown');
+        $('header').toggleClass('open');
+    });
+    $('header .menu a').click(function(){
+        $('header .menu').slideUp();
+        $("body").removeClass('menuOpen');
+        $('header').removeClass('open');
+    });
+
+    $('a[href=#about]').click(function () {
+            if ($W > 750) {
+                $('html,body').animate({
+                    scrollTop: $('#about').offset().top - 143
+                }, 800);
+            } else {
+                $('html,body').animate({
+                    scrollTop: $('#about').offset().top - 61
+                }, 800);
+            }
+        });
+        $('a[href=#transaction]').click(function () {
+            if ($W > 750) {
+                $('html,body').animate({
+                    scrollTop: $('#transaction').offset().top - 143
+                }, 800);
+            } else {
+                $('html,body').animate({
+                    scrollTop: $('#transaction').offset().top - 61
+                }, 800);
+            }
+        });
+        $('a[href=#trading]').click(function () {
+            if ($W > 750) {
+                $('html,body').animate({
+                    scrollTop: $('#trading').offset().top - 143
+                }, 800);
+            } else {
+                $('html,body').animate({
+                    scrollTop: $('#trading').offset().top - 61
+                }, 800);
+            }
+        });
+        $('a[href=#service]').click(function () {
+            if ($W > 750) {
+                $('html,body').animate({
+                    scrollTop: $('#service').offset().top - 143
+                }, 800);
+            } else {
+                $('html,body').animate({
+                    scrollTop: $('#service').offset().top - 61
+                }, 800);
+            }
+        });
+        $('a[href=#contact]').click(function () {
+            if ($W > 750) {
+                $('html,body').animate({
+                    scrollTop: $('#contact').offset().top - 143
+                }, 800);
+            } else {
+                $('html,body').animate({
+                    scrollTop: $('#contact').offset().top - 61
+                }, 800);
+            }
+        });
+    });
+</script>

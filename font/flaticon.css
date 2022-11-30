@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("./flaticon.ttf?b4f50d398f398a0fc9bd718695d87ab0") format("truetype"),
+url("./flaticon.woff?b4f50d398f398a0fc9bd718695d87ab0") format("woff"),
+url("./flaticon.woff2?b4f50d398f398a0fc9bd718695d87ab0") format("woff2"),
+url("./flaticon.eot?b4f50d398f398a0fc9bd718695d87ab0#iefix") format("embedded-opentype"),
+url("./flaticon.svg?b4f50d398f398a0fc9bd718695d87ab0#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-check:before {
+    content: "\f101";
+}
+.flaticon-24-hours-support:before {
+    content: "\f102";
+}
+.flaticon-transaction:before {
+    content: "\f103";
+}
+.flaticon-payment:before {
+    content: "\f104";
+}
+.flaticon-bank:before {
+    content: "\f105";
+}
+.flaticon-shield:before {
+    content: "\f106";
+}
+.flaticon-medal:before {
+    content: "\f107";
+}
+.flaticon-exchange:before {
+    content: "\f108";
+}
+.flaticon-placeholder-filled-point:before {
+    content: "\f109";
+}

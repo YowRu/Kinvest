@@ -1,0 +1,61 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?b4f50d398f398a0fc9bd718695d87ab0") format("truetype"),
+url("./flaticon.woff?b4f50d398f398a0fc9bd718695d87ab0") format("woff"),
+url("./flaticon.woff2?b4f50d398f398a0fc9bd718695d87ab0") format("woff2"),
+url("./flaticon.eot?b4f50d398f398a0fc9bd718695d87ab0#iefix") format("embedded-opentype"),
+url("./flaticon.svg?b4f50d398f398a0fc9bd718695d87ab0#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "check": "\f101",
+    "24-hours-support": "\f102",
+    "transaction": "\f103",
+    "payment": "\f104",
+    "bank": "\f105",
+    "shield": "\f106",
+    "medal": "\f107",
+    "exchange": "\f108",
+    "placeholder-filled-point": "\f109",
+);
+
+.flaticon-check:before {
+    content: map-get($flaticon-map, "check");
+}
+.flaticon-24-hours-support:before {
+    content: map-get($flaticon-map, "24-hours-support");
+}
+.flaticon-transaction:before {
+    content: map-get($flaticon-map, "transaction");
+}
+.flaticon-payment:before {
+    content: map-get($flaticon-map, "payment");
+}
+.flaticon-bank:before {
+    content: map-get($flaticon-map, "bank");
+}
+.flaticon-shield:before {
+    content: map-get($flaticon-map, "shield");
+}
+.flaticon-medal:before {
+    content: map-get($flaticon-map, "medal");
+}
+.flaticon-exchange:before {
+    content: map-get($flaticon-map, "exchange");
+}
+.flaticon-placeholder-filled-point:before {
+    content: map-get($flaticon-map, "placeholder-filled-point");
+}
